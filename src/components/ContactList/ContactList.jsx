@@ -3,15 +3,15 @@ import Contact from "../Contact/Contact"
 const ContactList = ({ contactsList, deleteContact }) => {
 return (
     <>
-    <div className={css.contactList}>
+    <ul className={css.contactList}>
     {contactsList.map(contact => {
         return  (
             <li className={css.item} key={contact.id}>
-            <Contact contact={contact} deleteContact={deleteContact} />
+            <Contact id={contact.id} name={contact.name} number={contact.number} deleteContact={deleteContact} />
             </li>
         );
     })}
-    </div></>
+    </ul></>
 );
 }
 

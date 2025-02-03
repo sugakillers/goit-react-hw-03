@@ -54,7 +54,7 @@ function App() {
     <div className={css.container}>
       <h1 className={css.mainTitle}>Phonebook</h1>
       <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onSearch={setFilter} />
+      <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contactsList={filteredContacts} deleteContact={deleteContact} />
     </div>
   );
